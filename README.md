@@ -11,7 +11,7 @@
 
 ---
 
-Current Build: Indev Build v0.8
+Current Build: Indev Build v1.0
 <br>
 
 A simple exploration game, built on [Project Shirayuki] (https://github.com/Psykkana/Project-Shirayuki)</p>
@@ -27,10 +27,11 @@ Assets not tailor-made for this project belong to their respective rights holder
 5. Basic Background music
 6. Basic Sound Effects
 7. Basic NPC dialog (no replies yet)
+8. Basic Map Editor (Project Kumano)
 
 ---
 
-## **How to use** ##
+## **How to use (to be revised)** ##
 1. Download the .java files + the assets folder
 2. Compile the .java files with 'javac *.java' in the command prompt
 4. Run the Driver file with 'java Driver' in the command prompt
