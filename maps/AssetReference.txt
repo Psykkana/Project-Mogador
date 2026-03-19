@@ -1,0 +1,58 @@
+ASSET LIST (for reference only)
+REMEMBER: The 22x22 goes from 0 to 21 (coordinates)
+
+BASIC GROUND / WALLS
+0 - grass
+1 - wall
+2 - wood
+3 - log
+4 - wood_floor
+5 - 
+6 - 
+7 - 
+8 - sand
+9 - water
+
+INTERACTABLES
+10 - door
+11 - signboard
+12 - 
+13 -
+14 - 
+15 - 
+16 - 
+17 - 
+18 - 
+19 - 
+
+DECORATIONS / MISC
+20 - grass-tree
+21 - cobblestone
+22 - wood_roof
+23 - wood_roof_left
+24 - wood_roof_right
+25 - tree_base
+26 - tree_middle
+27 - tree_leaves
+28 - metal_fence
+29 -
+
+DEBUG
+90 - debugfloor
+91 - player_up
+92 - player_down
+93 - player_left
+94 - player_right
+99 - Error_Texture
+
+SOUND
+        // Music
+        soundURL[0] = getClass().getResource("/assets/audio/bgm_main.wav");
+        soundURL[1] = getClass().getResource("/assets/audio/eerieworld.wav");
+
+        // Sound Effects     
+        soundURL[6] = getClass().getResource("/assets/audio/textsingle.wav");        
+        soundURL[7] = getClass().getResource("/assets/audio/buttonclick.wav");
+        soundURL[8] = getClass().getResource("/assets/audio/buttonclickrelease.wav");
+        soundURL[9] = getClass().getResource("/assets/audio/buttonrollover.wav");
+        soundURL[10] = getClass().getResource("/assets/audio/door_sfx.wav");    
