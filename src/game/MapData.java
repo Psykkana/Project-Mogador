@@ -1,3 +1,5 @@
+package game;
+
 import java.awt.Point;
 import java.util.*; // Required for the HashMap keys
 

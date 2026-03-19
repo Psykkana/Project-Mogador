@@ -1,3 +1,5 @@
+package game;
+
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;

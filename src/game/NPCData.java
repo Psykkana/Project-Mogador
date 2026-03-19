@@ -1,3 +1,5 @@
+package game;
+
 public class NPCData {
     public String name;
     public int x, y, spriteID;

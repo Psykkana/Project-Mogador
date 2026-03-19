@@ -1,3 +1,5 @@
+package game;
+
 import java.awt.Graphics;
 
 public interface Interactable {

@@ -1,3 +1,5 @@
+package game;
+
 import java.awt.Dimension;
 import javax.swing.*;
 
@@ -9,7 +11,7 @@ import javax.swing.*;
  *  
  */
 
-class Driver {
+class MogadorDriver {
 
     private static void Start() {
 
@@ -18,7 +20,7 @@ class Driver {
         int height = 807;
 
         // Create window frame with title at toolbar
-        JFrame window = new JFrame("Project Mogador INDEV v0.9");
+        JFrame window = new JFrame("Project Mogador INDEV v1.0");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // Close app upon pressing exit button
         
         GamePanel gamePanel = new GamePanel(); // Create our custom JPanel

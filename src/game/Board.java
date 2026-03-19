@@ -1,3 +1,5 @@
+package game;
+
 import java.awt.Graphics;
 import java.awt.Point;
 import java.util.HashMap;
@@ -43,9 +45,37 @@ public class Board {
             case 25 -> "Tree Base";
             case 26 -> "Tree Middle";
             case 27 -> "Tree Leaves";
+            case 28 -> "Metal Fence";
             case 90 -> "Debug Floor";
             case 99 -> "ERROR/MISSING";
             default -> "Unknown (" + id + ")";
+        };
+    }
+
+    // Purely to be used by AssetManager to be then called by Project Kumano
+    public static String getTileNameByID(int id) {
+        return switch (id) {
+            case 0 -> "Grass";
+            case 1 -> "Wall";
+            case 2 -> "Wood";
+            case 3 -> "Log";
+            case 4 -> "Wood Floor";
+            case 8 -> "Sand";
+            case 9 -> "Water";
+            case 10 -> "Door";
+            case 11 -> "Sign";
+            case 20 -> "Tree";
+            case 21 -> "Cobble";
+            case 22 -> "Roof";
+            case 23 -> "Roof (L)";
+            case 24 -> "Roof (R)";
+            case 25 -> "Tree (B)";
+            case 26 -> "Tree (M)";
+            case 27 -> "Tree (T)";
+            case 28 -> "Metal Fence";
+            case 90 -> "Debug";
+            case 99 -> "MISSING";
+            default -> "ID: " + id;
         };
     }
 
@@ -74,7 +104,8 @@ public class Board {
             id == 9 || 
             id == 11 ||  
             id == 20 ||
-            id == 25
+            id == 25 ||
+            id == 28
             ) { 
             return false; 
         }
@@ -114,7 +145,8 @@ public class Board {
                 id == 22 || 
                 id == 23 || 
                 id == 24 || 
-                id == 25;
+                id == 25 ||
+                id == 28;
     }
 
     public void draw(Graphics g) {

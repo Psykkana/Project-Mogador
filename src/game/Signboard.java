@@ -1,3 +1,5 @@
+package game;
+
 import java.awt.Graphics;
 
 public class Signboard implements Interactable {

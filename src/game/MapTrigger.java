@@ -1,3 +1,5 @@
+package game;
+
 import java.awt.Point;
 
 public class MapTrigger {

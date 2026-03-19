@@ -1,3 +1,5 @@
+package game;
+
 public class DialogueManager {
     private String[] pages;
     private int currentPageIndex;

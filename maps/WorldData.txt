@@ -101,7 +101,7 @@ SIGN: 10,10,This is the Debug World, you are not supposed to be here.
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 # NPC: x, y, spriteID, Name, Dialogue
 MUSIC: 1
-NPC: 10, 10, 91, Shirayuki, false, Oh?;What are you doing here;Don't you think you've gone somewhere you weren't supposed to go to?;...;Oh well;It's not like they can hear us here
+NPC: 10, 10, 91, Shirayuki?, false, Oh?;What are you doing here;Don't you think you've gone somewhere you weren't supposed to go to?;...;Oh well;It's not like they can hear us here
 
 [House1]
 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
