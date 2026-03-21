@@ -1,6 +1,8 @@
 package game;
 
 public class AssetManager {
+    public static Sound sound = new Sound();    // To be used for Kumano
+
     public static void loadAll() {
         // Tiles
         TextureLoader.load(0, "/assets/grass.png");
@@ -41,7 +43,11 @@ public class AssetManager {
     }
     
     public static String getTileName(int id) {
-        // You can hardcode this or point to Board.getTileName(id)
         return Board.getTileNameByID(id);
+    }
+
+    // To be used in Kumano
+    public static void playSound(String soundName) {
+        
     }
 }

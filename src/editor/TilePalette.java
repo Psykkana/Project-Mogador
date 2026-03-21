@@ -9,6 +9,8 @@ public class TilePalette extends JPanel {
     private MapGrid grid;
     private JLabel selectedPreview; // The "Current Brush" display
 
+    private java.util.List<JButton> tileButtons = new java.util.ArrayList<>();
+
     public TilePalette(MapGrid grid) {
         this.grid = grid;
         
@@ -35,11 +37,14 @@ public class TilePalette extends JPanel {
 
         // Define all the IDs
         int[] allTileIDs = {0, 1, 2, 3, 4, 8, 9, 10, 
-                            11, 20, 21, 22, 23, 24, 25, 26, 27, 28
+                            11, 20, 21, 22, 23, 24, 25, 26, 27, 28,
+                            91, 92, 93, 94
                             };
 
         for (int id : allTileIDs) {
-            buttonGrid.add(createTileButton(id));
+            JButton btn = createTileButton(id);
+            tileButtons.add(btn); // Store reference
+            buttonGrid.add(btn);
         }
 
         // Wrap the grid in a JScrollPane
@@ -60,6 +65,25 @@ public class TilePalette extends JPanel {
         selectedPreview.setText(name);
     }
 
+    public void refreshButtons() {
+        boolean npcMode = grid.isNpcMode();
+
+        for (JButton btn : tileButtons) {
+            int id = (int) btn.getClientProperty("tileID");
+            boolean isEntity = grid.isAllowedEntity(id);
+
+            // Determine if this button should be active
+            boolean shouldEnable = !npcMode || isEntity;
+            
+            btn.setEnabled(shouldEnable);
+
+            // Logic: Manually dim the custom labels inside the button
+            for (Component c : btn.getComponents()) {
+                c.setEnabled(shouldEnable); 
+            }
+        }
+    }
+
     private JButton createTileButton(int id) {
         // 1. Get Data from Game
         Image img = AssetManager.getTile(id);
@@ -67,6 +91,7 @@ public class TilePalette extends JPanel {
 
         // 2. Setup Button
         JButton btn = new JButton();
+        btn.putClientProperty("tileID", id);
         btn.setLayout(new BorderLayout());
         btn.setBackground(new Color(240, 240, 240));
         
@@ -87,9 +112,17 @@ public class TilePalette extends JPanel {
         
         btn.addActionListener(e -> {
             grid.setSelectedTileID(id);
+            game.AssetManager.sound.playSE(7);
             updatePreview(id); 
         });
         
+        btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+                game.AssetManager.sound.playSE(9); // buttonrollover.wav
+            }
+        });
+
         return btn;
     }
 }

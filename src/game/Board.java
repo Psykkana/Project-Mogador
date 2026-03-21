@@ -74,6 +74,10 @@ public class Board {
             case 27 -> "Tree (T)";
             case 28 -> "Metal Fence";
             case 90 -> "Debug";
+            case 91 -> "Player (UP)";
+            case 92 -> "Player (DOWN)";
+            case 93 -> "Player (LEFT)";
+            case 94 -> "Player (RIGHT)";
             case 99 -> "MISSING";
             default -> "ID: " + id;
         };
