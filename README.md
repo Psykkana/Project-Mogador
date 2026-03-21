@@ -11,7 +11,7 @@
 
 ---
 
-Current Build: Indev Build v1.0
+Current Build: Indev Build v1.1
 <br>
 
 A simple exploration game, built on [Project Shirayuki] (https://github.com/Psykkana/Project-Shirayuki)</p>
